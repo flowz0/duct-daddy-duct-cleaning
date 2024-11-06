@@ -11,8 +11,9 @@ import {
     Link,
     Button
 } from "@nextui-org/react";
-import { AcmeLogo } from "./AcmeLogo.jsx";
 import { useState } from "react";
+import DDDC from '@/app/assets/DDDC-logo.png'
+import Image from "next/image.js";
 
 export default function Navibar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,15 +25,21 @@ export default function Navibar() {
     ];
 
     return (
-        <Navbar className="bg-black text-white fixed top-0" onMenuOpenChange={setIsMenuOpen}>
+        <Navbar height={"5rem"} className="bg-neutral-100 text-neutral-600 fixed top-0" onMenuOpenChange={setIsMenuOpen}>
             <NavbarContent>
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                     className="sm:hidden"
                 />
-                <NavbarBrand>
-                    <AcmeLogo />
-                    <p className="font-bold text-inherit">DDDC</p>
+                <NavbarBrand className="flex justify-center">
+                    <Image
+                        src={DDDC}
+                        alt="DDDC Logo"
+                        height={1000}
+                        width={1000}
+                        className="h-48 w-auto"
+                    />
+                    {/* <p className="font-bold text-inherit">Duct Daddy Duct Cleaning</p> */}
                 </NavbarBrand>
             </NavbarContent>
 
@@ -53,14 +60,14 @@ export default function Navibar() {
                     </Link>
                 </NavbarItem>
             </NavbarContent>
-            <NavbarContent justify="end">
+            <NavbarContent justify="end" className="hidden sm:flex">
                 <NavbarItem>
-                    <Button as={Link} color="primary" href="#" variant="flat">
+                    <Button as={Link} color="primary" href="#">
                         Contact
                     </Button>
                 </NavbarItem>
             </NavbarContent>
-            <NavbarMenu className="bg-black text-white">
+            <NavbarMenu className="bg-neutral-100 text-neutral-600">
                 {menuItems.map((item, index) => (
                     <NavbarMenuItem key={`${item}-${index}`}>
                         <Link
@@ -75,6 +82,11 @@ export default function Navibar() {
                         </Link>
                     </NavbarMenuItem>
                 ))}
+                <NavbarMenuItem className="mt-6">
+                    <Button as={Link} color="primary" href="#" className="w-full">
+                        Contact
+                    </Button>
+                </NavbarMenuItem>
             </NavbarMenu>
         </Navbar>
     );
