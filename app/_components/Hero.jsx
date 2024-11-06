@@ -12,9 +12,11 @@ export default function Hero() {
                 className="absolute h-full z-[-1] object-cover filter brightness-50"
                 priority
             />
-            <header className="h-full flex flex-col items-center justify-center text-center p-2">
+            <header className="h-full flex flex-col items-center justify-center text-center p-4">
                 <Image
                     src={DDDCLogo}
+                    height={1920}
+                    width={1080}
                     alt="Duct Daddy Duct Cleaning logo"
                     className="h-72 w-auto"
                 />

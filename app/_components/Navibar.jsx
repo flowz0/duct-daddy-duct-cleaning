@@ -22,22 +22,24 @@ export default function Navibar() {
         "Home",
         "Services",
         "Pricing",
+        "Contact",
     ];
 
     return (
-        <Navbar height={"5rem"} className="bg-neutral-100 text-neutral-600 fixed top-0" onMenuOpenChange={setIsMenuOpen}>
+        <Navbar height={"4rem"} className="bg-neutral-100 text-neutral-600 fixed top-0" onMenuOpenChange={setIsMenuOpen}>
             <NavbarContent>
-                <NavbarMenuToggle
-                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                    className="sm:hidden"
-                />
-                <NavbarBrand className="flex justify-center">
+
+                <NavbarBrand className="flex justify-between">
                     <Image
                         src={DDDC}
                         alt="DDDC Logo"
                         height={1000}
                         width={1000}
-                        className="h-48 w-auto"
+                        className="h-40 w-auto"
+                    />
+                    <NavbarMenuToggle
+                        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                        className="sm:hidden p-6"
                     />
                     {/* <p className="font-bold text-inherit">Duct Daddy Duct Cleaning</p> */}
                 </NavbarBrand>
@@ -57,6 +59,11 @@ export default function Navibar() {
                 <NavbarItem>
                     <Link color="foreground" href="#">
                         Pricing
+                    </Link>
+                </NavbarItem>
+                <NavbarItem>
+                    <Link color="foreground" href="#">
+                        Contact
                     </Link>
                 </NavbarItem>
             </NavbarContent>
