@@ -8,7 +8,7 @@ export default function Contact() {
     const [agreed, setAgreed] = useState(false)
 
     return (
-        <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <div  id="contact-us" className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
             <div
                 aria-hidden="true"
                 className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -21,11 +21,17 @@ export default function Contact() {
                     className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
                 />
             </div>
-            <div className="mx-auto max-w-2xl text-center">
-                <h2 className="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Contact sales</h2>
-                <p className="mt-2 text-lg/8 text-gray-600">Aute magna irure deserunt veniam aliqua magna enim voluptate.</p>
+            <div className="mx-auto max-w-4xl text-center">
+                <h2 className="text-base/7 font-semibold text-sky-600">Contact</h2>
+                <p className="mt-2 text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
+                    Get a Quote Today
+                </p>
+                {/* <p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg font-medium text-gray-600 sm:text-xl/8">
+                    Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer
+                    loyalty, and driving sales.
+                </p> */}
             </div>
-            <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+            <form action="#" method="POST" className="mx-auto mt-12 max-w-xl sm:mt-20">
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                     <div>
                         <label htmlFor="first-name" className="block text-sm/6 font-semibold text-gray-900">
@@ -151,7 +157,7 @@ export default function Contact() {
                     >
                         Get a Quote Today
                     </button> */}
-                    <Button className="w-full" color="primary">Get a Quote Today</Button>
+                    <Button className="w-full" color="primary">Request a Free Quote</Button>
                 </div>
             </form>
         </div>

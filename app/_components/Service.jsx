@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Service({ serviceImage, serviceTitle, serviceDesc, serviceCTAButton }) {
     return (
-        <article className="max-w-4xl md:max-w-sm max-h-full mt-6 bg-white md:border md:border-gray-200 md:rounded-lg md:shadow dark:bg-gray-800 dark:border-gray-700">
+        <article className="max-w-4xl md:max-w-xl lg:max-w-sm max-h-full mt-6 bg-white md:border md:border-gray-200 md:rounded-lg md:shadow dark:bg-gray-800 dark:border-gray-700">
             <Image
                 src={serviceImage || testimage}
                 alt="Service image"

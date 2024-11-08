@@ -30,13 +30,16 @@ export default function Navibar() {
             <NavbarContent>
 
                 <NavbarBrand className="flex justify-between">
-                    <Image
-                        src={DDDC}
-                        alt="DDDC Logo"
-                        height={1000}
-                        width={1000}
-                        className="h-40 w-auto"
-                    />
+                    <Link href="#home">
+
+                        <Image
+                            src={DDDC}
+                            alt="DDDC Logo"
+                            height={1000}
+                            width={1000}
+                            className="h-40 w-auto"
+                        />
+                    </Link>
                     <NavbarMenuToggle
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                         className="sm:hidden p-6"
@@ -47,7 +50,7 @@ export default function Navibar() {
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem>
-                    <Link color="foreground" href="#">
+                    <Link color="foreground" href="#home">
                         Home
                     </Link>
                 </NavbarItem>
